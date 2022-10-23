@@ -755,7 +755,8 @@ crs: L.CRS.Simple
 
 var bounds = [[0, 0], [3072, 2816]];
 //var image = L.imageOverlay('09scape-wmap-3072x2816-256div-L.jpg', bounds).addTo(map); /* <-- very poor resolution image */
-var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map); /* <-- image quality reduced 50% from original (9mb file!)*/
+//var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map); /* <-- image quality reduced 50% from original (9mb file!)*/
+var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div.jpg', bounds).addTo(map);
 map.fitBounds(bounds);
 
 /* Here we go...  */
