@@ -1,3 +1,27 @@
+<html>
+<head>
+		<meta charset="utf-8" />
+			<title>Getting There in 2009scape - 2009Scape's travel map (rev. 22 Oct 2022)</title>
+			
+			<!--
+			project created by zencro
+			rev.1.0
+			22 Oct 2022
+			created & edited by zencro
+			rev.1.1
+			23 Oct 2022
+			edited by szumaster
+			-->
+				<style>
+					#map {
+						height: 100%;
+					}
+				</style>
+				
+		<link rel="stylesheet" href="data/css/mousepos.css"/>
+		<link rel="stylesheet" href="data/css/leaflet.css" />
+		<script src="data/scripts/leaflet-src.js"></script>
+=======
 <title>Getting There in 2009scape - 2009Scape's travel map</title>
 
 <!--
@@ -711,10 +735,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 	
 </head>
+
 <body>
-
-<div id='map'></div>
-
+		    <div id="map"></div>
+			
 <script>
 
 var map = L.map('map', {
@@ -731,11 +755,8 @@ crs: L.CRS.Simple
 
 var bounds = [[0, 0], [3072, 2816]];
 //var image = L.imageOverlay('09scape-wmap-3072x2816-256div-L.jpg', bounds).addTo(map); /* <-- very poor resolution image */
-//var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map); /* <-- image quality reduced 50% from original (9mb file!)*/
-var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div.jpg', bounds).addTo(map);
-	
-	map.fitBounds(bounds); 
-
+var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map); /* <-- image quality reduced 50% from original (9mb file!)*/
+map.fitBounds(bounds);
 
 /* Here we go...  */
 
@@ -899,8 +920,6 @@ var mShip = L.marker([1313,1517], {icon: shipanimIcon}).bindPopup('Port Sarim : 
 
 L.tileLayer('https://{s}2009scape.org/favicon.ico', { attribution: ' Data &copy; 2022 under <a href="https://2009scape.org/site/terms/terms.html">AGPL</a> <a href="https://2009scape.org">2009scape</a> contributors' }).addTo(map);
 
-</script>
-
-</body>
+		</script>
+	</body>
 </html>
-
