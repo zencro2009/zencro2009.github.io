@@ -1,45 +1,53 @@
 <html>
-<head>
+
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Getting There in 2009scape - 2009Scape's travel map (rev. 22 Oct 2022)</title>
-		<link rel="stylesheet" href="data/css/mousepos.css"/>
-		<link rel="stylesheet" href="data/css/leaflet.css" />
-		<script src="data/scripts/leaflet-src.js"></script>
+    <title>Getting There in 2009scape - 2009Scape's travel map (rev. 22 Oct 2022)</title>
+    <link rel="stylesheet" href="data/css/mousepos.css" />
+    <link rel="stylesheet" href="data/css/leaflet.css" />
+    <script src="data/scripts/leaflet-src.js"></script>
     <style>
-      html, body {
+      html,
+      body {
         height: 100%;
         padding: 0;
         margin: 0;
       }
+
       #map {
         /* configure the size of the map */
         width: 50%;
-        height: 50%;
+        height: 80%;
       }
+
     </style>
-</head>
-<body>
-<div id="map"></div>
-<script>
-  var map = L.map('map', {
-	zoomControl: false,
-	minZoom: 0,
-	maxZoom: 1,
-    crs: L.CRS.Simple
-  });
+  </head>
 
-var bounds = [
-  [0, 0],
-  [3072, 2816]
-];
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = L.map('map', {
+        zoomControl: false,
+        minZoom: 0,
+        maxZoom: 0,
+        crs: L.CRS.Simple
+      });
 
-var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map);
-map.fitBounds(bounds);
+      var bounds = [
+        [0, 0],
+        [3072, 2816]
+      ];
+
+      var image = L.imageOverlay('data/mapimage/X09scape-wmap-3072x2816-256div-red50.jpg', bounds).addTo(map);
+      map.fitBounds(bounds);
       L.tileLayer('https://{s}2009scape.org/favicon.ico', {
         attribution: ' Data &copy; 2022 under <a href="https://2009scape.org/site/terms/terms.html">AGPL</a> <a href="https://2009scape.org">2009scape</a> contributors'
       }).addTo(map);
-</script>
+
+    </script>
+
+
 <!-------- Map Content below ------>
 
 <script>
