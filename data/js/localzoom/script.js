@@ -10,8 +10,8 @@
          });
 
          // size and src of the image
-         var w = 3840,
-             h = 3840,
+         var w = 15104,
+             h = 12800,
              url = 'library/layers/0.png';
          // calculate the edges of the image, in coordinate space
          var southWest = map.unproject([0, h], map.getMaxZoom() - 2);
