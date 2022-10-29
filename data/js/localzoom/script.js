@@ -2,10 +2,10 @@
          var map = L.map('image-map', {
              zoomControl: false,
              attributionControl: false,
-             minZoom: 1,
-             maxZoom: 6,
+             minZoom: 0,
+             maxZoom: 5,
              center: [0, 0],
-             zoom: 4,
+             zoom: 3,
              crs: L.CRS.Simple
          });
 
