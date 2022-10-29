@@ -2,16 +2,16 @@
          var map = L.map('image-map', {
              zoomControl: false,
              attributionControl: false,
-             minZoom: -1,
-             maxZoom: 5,
+             minZoom: 1,
+             maxZoom: 6,
              center: [0, 0],
-             zoom: 3,
+             zoom: 4,
              crs: L.CRS.Simple
          });
 
          // size and src of the image
-         var w = 15104,
-             h = 12800,
+         var w = 3840,
+             h = 3840,
              url = 'library/layers/0.png';
          // calculate the edges of the image, in coordinate space
          var southWest = map.unproject([0, h], map.getMaxZoom() - 2);
