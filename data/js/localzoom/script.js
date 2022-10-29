@@ -2,7 +2,7 @@
          var map = L.map('image-map', {
              zoomControl: false,
              attributionControl: false,
-             minZoom: -1,
+             minZoom: 0,
              maxZoom: 5,
              center: [0, 0],
              zoom: 3,
