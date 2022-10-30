@@ -24,17 +24,16 @@ var spiritIcon=L.icon(
 );
 
 <!-------------- Fairy -------------->
-var fairyIcon=L.icon(
-{
-     iconUrl: 'library/markers/glowfring-icon.gif',
-     shadowUrl: 'library/markers/fring-icon-30-sh.gif',
-     iconSize: [12, 10],
-     shadowSize: [10, 10],
-     iconAnchor: [10, 10],
-     shadowAnchor: [10, 10],
-     popupAnchor: [-10, -12]
-	}
-);
+var fairyIcon=L.icon({
+
+     iconUrl: 'library/markers/gif/fairy_ring_icon.gif',
+     shadowUrl: 'library/markers/gif/fairy_ring_icon.gif',
+     iconSize: [30],
+     iconAnchor: [15, 30],
+     shadowSize: [30],
+     shadowAnchor: [15, 15],
+     popupAnchor: [0, 0]
+});
 
 <!-------------- Ring of Dueling -------------->
 var ringIcon=L.icon( 
