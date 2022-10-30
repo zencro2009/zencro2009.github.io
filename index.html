@@ -1,7 +1,8 @@
  <html>
- 
+
    <head>
-     <meta charset="utf-8" />
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>2009Scape Map</title>
      <!-- Leaflet library -->
      <script src="data/js/leaflet/script.js"></script>
@@ -14,13 +15,51 @@
        }
      </style>
    </head>
-   
+
    <body>
      <!-- Initialize map --->
      <div id="image-map"></div>
      <!-- Scripts --->
-     <script src="data/js/localzoom/script.js"></script>
-     <script src="data/js/tilelayer/script.js"></script>
+     <script src="data/js/leaflet-control-layers/script.js"></script>
+     <script>
+       // initialize map
+       var map = L.map('image-map', {
+         zoomControl: false,
+         attributionControl: false,
+         minZoom: 0,
+         maxZoom: 5,
+         center: [0, 0],
+         zoom: 3,
+         crs: L.CRS.Simple
+       });
+       // size and src of the image
+       var w = 3840,
+         h = 3840,
+         url = 'library/layers/0.png';
+       // calculate the edges of the image, in coordinate space
+       var southWest = map.unproject([0, h], map.getMaxZoom() - 2);
+       var northEast = map.unproject([w, 0], map.getMaxZoom() - 2);
+       var bounds = new L.LatLngBounds(southWest, northEast);
+       // add the image overlay so that it covers the entire map
+       L.imageOverlay(url, bounds).addTo(map);
+       // tell leaflet that the map is exactly as big as the image
+       map.setMaxBounds(bounds);
+     </script>
+	 
+	 <!-------------- Markers -------------->
+     <script src="data/js/marker/script.js"></script>
+     <script>
+       // gloryIcon = Glory Amulet
+       // spiritIcon = Spirit Tree
+       // fairyIcon = Fairy Ring
+       // ringIcon = Ring of Dueling
+       // carpetIcon = Magic Carpet
+	   
+       // markers for icons
+       L.marker([1, 1], {icon: gloryIcon}).bindPopup('example_text').addTo(map);
+       L.marker([2, 2], {icon: spiritIcon}).bindPopup('example_text').addTo(map);
+       L.marker([3, 3], {icon: fairyIcon}).bindPopup('example_text').addTo(map);
+     </script>
    </body>
-   
+
  </html>
