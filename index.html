@@ -89,7 +89,7 @@
     	subdomains:['mt0']}).addTo(map);
 
 
-      var mytile =L.tileLayer('https://github.com/zencro2009/zencro2009.github.io/blob/main/library/tiles/map/{z}/{x}/{y}.png', {
+      var mytile =L.tileLayer('https://github.com/zencro2009/zencro2009.github.io/tree/main/library/tiles/map/{z}/{x}/{y}.png', {
         maxZoom: 6,
 	minZoom: 5,
         tms: false
@@ -110,8 +110,8 @@ var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
       var div = L.DomUtil.create('div', 'info legend'),
-         grades = [1, 2, 3, 4, 5],
-         labels = ['ENF','DNF','EBF','DBF','MIX'];
+         grades = [1],
+         labels = ['1'];
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
