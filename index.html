@@ -1,140 +1,160 @@
- <html>
+<!DOCTYPE html>
+<html>
 
-   <head>
-     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>2009Scape Map</title>
+  <head>
+    <title>2009Scape Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      #basemapslidercontainer {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 100;
+      }
 
-     <!-- Map style -->
-  <style type="text/css">
-    #basemapslidercontainer {
-      position: absolute;
-      top: 50px;
-      right: 10px;
-      z-index: 1000;
-    }
+      #basemapslider {
+        font-size: 62.5%;
+        margin: 14px;
+        height: 125px;
+        width: 7px;
+      }
 
-    #basemapslider{
-      font-size:62.5%;
-      margin: 14px;
-      height: 125px;
-      width:7px;
-    }
+      #map {
+        width: 800px;
+        height: 600px
+      }
 
-    #map{
-       width: 800px;
-       height: 600px
-    }
+      .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
 
-.info {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-}
-.info h4 {
-    margin: 0 0 5px;
-    color: #777;
-}
+      .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+      }
 
 
-.legend {
-    line-height: 18px;
-    color: #555;
-}
-.legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-}
+      .legend {
+        line-height: 18px;
+        color: #555;
+      }
 
-  </style>
-   </head>
+      .legend i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+      }
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    </style>
 
-  <script>
-    $(document).ready(function () {
-      $("#basemapslider").slider({
-            animate: true,
-            value: 1,
-            orientation: "vertical",
-            min: 0,
-            max: 1,
-            step: 0.1,
-            slide: function (event, ui) {
-                mytile.setOpacity(ui.value);
-            }
-       });
+    <link rel="stylesheet" href="./data/css/style.css">
+    <script src="./data/js/leaflet/script.js"></script>
+    <script src="./data/js/jquery/script.js"></script>
+    <script src="./data/js/jquery-ui/script.js"></script>
 
-        $('#basemapslider').mousedown(function(){
+    <script>
+      $(document).ready(function() {
+        $("#basemapslider").slider({
+          animate: true,
+          value: 2,
+          orientation: "vertical",
+          min: 0,
+          max: 1,
+          step: 0.1,
+          slide: function(event, ui) {
+            mytile.setOpacity(ui.value);
+          }
+        });
+
+        $('#basemapslider').mousedown(function() {
           map.dragging.disable();
         })
 
-        $('#basemapslider').mouseup(function(){
+        $('#basemapslider').mouseup(function() {
           map.dragging.enable();
         })
 
-      var map = L.map('map').setView([45, 10], 3);
-      var baselayer =  L.tileLayer('library/tiles/map/{z}/{x}/{y}.png',{
-    	maxZoom: 5,
-    	minZoom: 1,
-    	subdomains:['mt0']}).addTo(map);
+        var map = L.map('map', {
+          zoomControl: false,
+          attributionControl: false,
+          maxZoom: 5,
+          minZoom: 1,
+          center: [-50, 100],
+          zoom: 1,
+          crs: L.CRS.Simple
+        });
+
+        var baselayer = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
+          tms: false
+        }).addTo(map);
 
 
-      var mytile =L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
-        maxZoom: 5,
-	minZoom: 1,
-        tms: false
-      }).addTo(map);
+        var global = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
+          tms: false
+        }).addTo(map);
 
-      L.control.layers({'Basemap':baselayer},{'mf':mytile}).addTo(map);
+        var dungeons = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
+          tms: false
+        }).addTo(map);
 
-function getColor(d) {
-    return d == 5  ? '#5E3C99' :
-           d == 4  ? '#B2ABD2' :
-           d == 3  ? '#F7F7F7' :
-           d == 2  ? '#FDB863' :
-           d == 1  ? '#E66101' :
-                     '#E66101' ;
-}
+        L.control.layers({
+          '2009Scape': baselayer
+        }, {
+          'global': global,
+          'dungeons': dungeons
 
-var legend = L.control({position: 'bottomright'});
+        }).addTo(map);
 
-legend.onAdd = function (map) {
-      var div = L.DomUtil.create('div', 'info legend'),
-         grades = [1],
-         labels = ['1'];
+        function getColor(d) {
+          return d == 5 ? '#5E3C99' :
+            d == 4 ? '#2e00ff' :
+            d == 3 ? '#ff0000' :
+            d == 2 ? '#00ffd9' :
+            d == 1 ? '#ffea08' :
+            '#ffea08';
+        }
 
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
+        var legend = L.control({
+          position: 'bottomright'
+        });
 
-        div.innerHTML +=
-            '<i style="background:' + getColor(grades[i]) + '"></i> ' +
-            labels[i] + '<br>';
-    }
-    return div;
-};
+        legend.onAdd = function(map) {
+          var div = L.DomUtil.create('div', 'info legend'),
+            grades = [1, 2, 3, 4, 5],
+            labels = ['1', '2', '3', '4', '5'];
 
-legend.addTo(map);
+          for (var i = 0; i < grades.length; i++) {
+
+            div.innerHTML +=
+              '<i style="background:' + getColor(grades[i]) + '"></i> ' +
+              labels[i] + '<br>';
+          }
+          return div;
+        };
+
+        legend.addTo(map);
 
 
-    })
-  </script>
-</head>
-<body>
-  <div id="map">
-    <div id="basemapslidercontainer">
-      <div id="basemapslider">
+      })
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map">
+      <div id="basemapslidercontainer">
+        <div id="basemapslider">
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
-</body>
+  </body>
+
 </html>
