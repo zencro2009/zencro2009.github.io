@@ -82,16 +82,16 @@
           map.dragging.enable();
         })
 
-      var map = L.map('map').setView([45, 10], 6);
-      var baselayer =  L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-    	maxZoom: 6,
-    	minZoom: 5,
+      var map = L.map('map').setView([45, 10], 3);
+      var baselayer =  L.tileLayer('library/tiles/map/{z}/{x}/{y}.png',{
+    	maxZoom: 5,
+    	minZoom: 1,
     	subdomains:['mt0']}).addTo(map);
 
 
-      var mytile =L.tileLayer('https://github.com/zencro2009/zencro2009.github.io/tree/main/library/tiles/map/{z}/{x}/{y}.png', {
-        maxZoom: 6,
-	minZoom: 5,
+      var mytile =L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
+        maxZoom: 5,
+	minZoom: 1,
         tms: false
       }).addTo(map);
 
