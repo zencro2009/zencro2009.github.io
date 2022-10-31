@@ -6,65 +6,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
-      #basemapslidercontainer {
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        z-index: 100;
-      }
-
-      #basemapslider {
-        font-size: 62.5%;
-        margin: 14px;
-        height: 125px;
-        width: 7px;
-      }
-
       #map {
-        width: 800px;
-        height: 600px
+        width: 1000px;
+        height: 1000px
       }
-
-      .info {
-        padding: 6px 8px;
-        font: 14px/16px Arial, Helvetica, sans-serif;
-        background: white;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-      }
-
-      .info h4 {
-        margin: 0 0 5px;
-        color: #777;
-      }
-
-
-      .legend {
-        line-height: 18px;
-        color: #555;
-      }
-
-      .legend i {
-        width: 18px;
-        height: 18px;
-        float: left;
-        margin-right: 8px;
-        opacity: 0.7;
-      }
-
     </style>
-
     <link rel="stylesheet" href="./data/css/style.css">
     <script src="./data/js/leaflet/script.js"></script>
     <script src="./data/js/jquery/script.js"></script>
     <script src="./data/js/jquery-ui/script.js"></script>
-
     <script>
       $(document).ready(function() {
         $("#basemapslider").slider({
           animate: true,
-          value: 2,
+          value: 1,
           orientation: "vertical",
           min: 0,
           max: 1,
@@ -73,19 +28,10 @@
             mytile.setOpacity(ui.value);
           }
         });
-
-        $('#basemapslider').mousedown(function() {
-          map.dragging.disable();
-        })
-
-        $('#basemapslider').mouseup(function() {
-          map.dragging.enable();
-        })
-
         var map = L.map('map', {
           zoomControl: false,
           attributionControl: false,
-          maxZoom: 5,
+          maxZoom: 6,
           minZoom: 1,
           center: [-50, 100],
           zoom: 1,
@@ -96,53 +42,9 @@
           tms: false
         }).addTo(map);
 
-
-        var global = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
-          tms: false
-        }).addTo(map);
-
-        var dungeons = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
-          tms: false
-        }).addTo(map);
-
         L.control.layers({
           '2009Scape': baselayer
-        }, {
-          'global': global,
-          'dungeons': dungeons
-
         }).addTo(map);
-
-        function getColor(d) {
-          return d == 5 ? '#5E3C99' :
-            d == 4 ? '#2e00ff' :
-            d == 3 ? '#ff0000' :
-            d == 2 ? '#00ffd9' :
-            d == 1 ? '#ffea08' :
-            '#ffea08';
-        }
-
-        var legend = L.control({
-          position: 'bottomright'
-        });
-
-        legend.onAdd = function(map) {
-          var div = L.DomUtil.create('div', 'info legend'),
-            grades = [1, 2, 3, 4, 5],
-            labels = ['1', '2', '3', '4', '5'];
-
-          for (var i = 0; i < grades.length; i++) {
-
-            div.innerHTML +=
-              '<i style="background:' + getColor(grades[i]) + '"></i> ' +
-              labels[i] + '<br>';
-          }
-          return div;
-        };
-
-        legend.addTo(map);
-
-
       })
 
     </script>
