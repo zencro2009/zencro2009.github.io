@@ -1,62 +1,25 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>2009Scape Map</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style type="text/css">
-      #map {
-        width: 1000px;
-        height: 1000px
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" />
+    <style>
+      html, body, #map {
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-color: #B0B0B0
       }
     </style>
-    <link rel="stylesheet" href="./data/css/style.css">
-    <script src="./data/js/leaflet/script.js"></script>
-    <script src="./data/js/jquery/script.js"></script>
-    <script src="./data/js/jquery-ui/script.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("#basemapslider").slider({
-          animate: true,
-          value: 1,
-          orientation: "vertical",
-          min: 0,
-          max: 1,
-          step: 0.1,
-          slide: function(event, ui) {
-            mytile.setOpacity(ui.value);
-          }
-        });
-        var map = L.map('map', {
-          zoomControl: false,
-          attributionControl: false,
-          maxZoom: 6,
-          minZoom: 1,
-          center: [-50, 100],
-          zoom: 1,
-          crs: L.CRS.Simple
-        });
-
-        var baselayer = L.tileLayer('library/tiles/map/{z}/{x}/{y}.png', {
-          tms: false
-        }).addTo(map);
-
-        L.control.layers({
-          '2009Scape': baselayer
-        }).addTo(map);
-      })
-
-    </script>
   </head>
-
   <body>
-    <div id="map">
-      <div id="basemapslidercontainer">
-        <div id="basemapslider">
-        </div>
-      </div>
-    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script>
+    <script src="rastercoords.js"></script>
+    <script src="geojson.js"></script>
+    <script src="index.js"></script>
   </body>
-
 </html>
