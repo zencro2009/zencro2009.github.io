@@ -12,42 +12,6 @@
   }, {
     type: 'Feature',
     properties: {
-      name: 'Ireland'
-    },
-    geometry: {
-      type: 'Point',
-      coordinates: [1324, 1580]
-    }
-  }, {
-    type: 'Feature',
-    properties: {
-      name: 'England'
-    },
-    geometry: {
-      type: 'Point',
-      coordinates: [1498, 1662]
-    }
-  }, {
-    type: 'Feature',
-    properties: {
-      name: 'France'
-    },
-    geometry: {
-      type: 'Point',
-      coordinates: [1608, 1918]
-    }
-  }, {
-    type: 'Feature',
-    properties: {
-      name: 'Italia'
-    },
-    geometry: {
-      type: 'Point',
-      coordinates: [1923, 2093]
-    }
-  }, {
-    type: 'Feature',
-    properties: {
       name: 'Hispania'
     },
     geometry: {
@@ -69,24 +33,6 @@
   }, {
     'type': 'Feature',
     'properties': {
-      'name': 'Mare Balticum'
-    },
-    'geometry': {
-      'type': 'Point',
-      'coordinates': [2090, 1407]
-    }
-  }, {
-    'type': 'Feature',
-    'properties': {
-      'name': 'Mare Mediteraneum'
-    },
-    'geometry': {
-      'type': 'Point',
-      'coordinates': [2028, 2453]
-    }
-  }, {
-    'type': 'Feature',
-    'properties': {
       'name': 'Mare Maggiore'
     },
     'geometry': {
@@ -94,8 +40,53 @@
       'coordinates': [2623, 1918]
     }
   }]
+  
+  
+  // fring definitions [distance from east, distance from north]
+  
+  
+ // window.geoInfo = [{
+ window.fringInfo = [
+ {'type': 'Feature', 'properties': {'name': 'Piscatoris Fishing Colony<br>Fairy Ring Code: AKQ'}, 'geometry': {'type': 'Point',   'coordinates': [2525, 4007]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Poison Waste: DLR <br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [1668, 8197]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Penguin Island : AJS <br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [3990, 1724]} }, 
+ {'type': 'Feature', 'properties': {'name': 'South of Castle Wars : BKP' }, 'geometry': {'type': 'Point', 'coordinates': [3060, 8716]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Feldip Hills : AKS' }, 'geometry': {'type': 'Point', 'coordinates': [4565, 9356]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Hazelmere\'s Island : CLS' }, 'geometry': {'type': 'Point', 'coordinates': [5464, 8343]} },  
+ {'type': 'Feature', 'properties': {'name': 'Miscellania : CIP' }, 'geometry': {'type': 'Point', 'coordinates': [4096, 1820]} },  
+ {'type': 'Feature', 'properties': {'name': 'Northeast of Keldagrim Entrance : DKS' }, 'geometry': {'type': 'Point', 'coordinates': [5964, 3161]} },  
+ {'type': 'Feature', 'properties': {'name': 'West of Fremmenik Slayer Cave Entrance: AJR' }, 'geometry': {'type': 'Point', 'coordinates': [6255, 4022]} },  
+ {'type': 'Feature', 'properties': {'name': 'Sinclair North West : DJR' }, 'geometry': {'type': 'Point', 'coordinates': [5415, 4234]} },  
+ {'type': 'Feature', 'properties': {'name': 'Sinclair West : CJR' }, 'geometry': {'type': 'Point', 'coordinates': [5649, 4323]} },  
+ {'type': 'Feature', 'properties': {'name': 'West of Baxtorian Falls : BJQ' }, 'geometry': {'type': 'Point', 'coordinates': [3820, 5289]} },  
+ {'type': 'Feature', 'properties': {'name': 'McGrubor\'s Wood : ALS' }, 'geometry': {'type': 'Point', 'coordinates': [5157, 4979]} },  
+ {'type': 'Feature', 'properties': {'name': 'North west of Yanille : CIQ' }, 'geometry': {'type': 'Point', 'coordinates': [4217, 7971]} },  
+ {'type': 'Feature', 'properties': {'name': 'Tower of Life : DJP' }, 'geometry': {'type': 'Point', 'coordinates': [5269, 7134]} },  
+ {'type': 'Feature', 'properties': {'name': 'Ardougne Zoo Unicorns : BIS' }, 'geometry': {'type': 'Point', 'coordinates': [5091, 6841]} },  
+ {'type': 'Feature', 'properties': {'name': 'Legends Guild : BLR' }, 'geometry': {'type': 'Point', 'coordinates': [5932, 6151]} },  
+ {'type': 'Feature', 'properties': {'name': 'TzHaar Area : BLP <center>(Underground)</center>' }, 'geometry': {'type': 'Point', 'coordinates': [6770, 7555]} },  
+ {'type': 'Feature', 'properties': {'name': 'Northeast Karamja : DKP' }, 'geometry': {'type': 'Point', 'coordinates': [7228, 8100]} },  
+ {'type': 'Feature', 'properties': {'name': 'Karamja Hunter : CKR' }, 'geometry': {'type': 'Point', 'coordinates': [6424, 8980]} },  
+ {'type': 'Feature', 'properties': {'name': 'Mudskipper point: AIQ' }, 'geometry': {'type': 'Point', 'coordinates': [8004, 8109]} },  
+ {'type': 'Feature', 'properties': {'name': 'Wizards Tower : DIS' }, 'geometry': {'type': 'Point', 'coordinates': [8927, 7807]} },  
+ {'type': 'Feature', 'properties': {'name': 'Island South of Draynor Village : CLP' }, 'geometry': {'type': 'Point', 'coordinates': [8698, 7331]} },  
+ {'type': 'Feature', 'properties': {'name': 'Edgeville/GE : DKR' }, 'geometry': {'type': 'Point', 'coordinates': [9065, 4989]} },  
+ {'type': 'Feature', 'properties': {'name': 'South East of Kalphite Lair Entrance: BIQ' }, 'geometry': {'type': 'Point', 'coordinates': [10050, 8248]} },  
+ {'type': 'Feature', 'properties': {'name': 'Desert Lizard Hunter Area: DLQ' }, 'geometry': {'type': 'Point', 'coordinates': [11459, 8870]} },  
+ {'type': 'Feature', 'properties': {'name': 'Island, Salve River : BIP<br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [11352, 6373]} },  
+ {'type': 'Feature', 'properties': {'name': 'Canafis : CKS' }, 'geometry': {'type': 'Point', 'coordinates': [11654, 5184]} },  
+ {'type': 'Feature', 'properties': {'name': 'Mort Myre Swamp : BKR' }, 'geometry': {'type': 'Point', 'coordinates': [11830, 5502]} },  
+ {'type': 'Feature', 'properties': {'name': 'Haunted Woods : ALQ' }, 'geometry': {'type': 'Point', 'coordinates': [12882, 4990]} },  
+ {'type': 'Feature', 'properties': {'name': 'Island East of Necromancer : AIR<br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [5610, 6994]} },  
+
+ {'type': 'Feature', 'properties': {'name': 'Enchanted Valley : BKQ' }, 'geometry': {'type': 'Point', 'coordinates': [2500, 1300]} },  
+ {'type': 'Feature', 'properties': {'name': 'Abyssal Space : ALR' }, 'geometry': {'type': 'Point', 'coordinates': [2500, 1350]} },  
+ {'type': 'Feature', 'properties': {'name': 'Caves South of Dorgesh-Kaan : AJQ' }, 'geometry': {'type': 'Point', 'coordinates': [2500, 1400]} }
+ ]
+  
 
   // polygon
+  /*
   window.polygon = [{
     x: 1528.5,
     y: 1524
@@ -229,4 +220,5 @@
     x: 1528.5,
     y: 1524
   }]
+*/  
 }(window))

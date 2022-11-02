@@ -22,11 +22,12 @@
 
     // add layer control object
     L.control.layers({}, {
-      'Polygon': layerPolygon(map, rc),
+     // 'Polygon': layerPolygon(map, rc),
       'Countries': layerCountries(map, rc),
-      'Bounds': layerBounds(map, rc, img),
+      'Bounds': layerBounds(map, rc, img),// comment this after all coordinates established!
       'Info': layerGeo(map, rc),
-      'Circles': layerCircles(map, rc)
+      'Fairy Rings': layerFring(map, rc),               
+      // 'Circles': layerCircles(map, rc)
     }).addTo(map)
 
     // the tile layer containing the image generated with gdal2tiles --leaflet ...
@@ -126,6 +127,47 @@
     map.addLayer(layerGeo)
     return layerGeo
   }
+/**
+  * BEG layer Fairy Rings
+ */ 
+
+function layerFring (map, rc) {
+    var imgDir = 'images/'
+    var fringMarker = L.icon({
+      iconUrl: imgDir + 'fring-icon.gif',
+      iconRetinaUrl: imgDir + 'fring-icon-2x.gif',
+      iconSize: [30, 30],
+    //  iconAnchor: [12, 41],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerFring = L.geoJson(window.fringInfo, {
+      // correctly map the fringjson coordinates on the image
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: fringMarker
+        })
+      }
+    })
+    map.addLayer(layerFring)
+    return layerFring
+  }
+
+/**
+ * FIN layer Fairy Rings
+*/
 
   /**
    * layer drawing a polygon
