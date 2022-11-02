@@ -1,5 +1,5 @@
 #### 2009Map
-created by Zencro.
+Map created and coordinates entered by Zencro. Most of the coding done by Szumaster.
 
 - leaflet map
 - source: https://github.com/Leaflet/Leaflet
