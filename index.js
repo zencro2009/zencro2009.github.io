@@ -23,11 +23,22 @@
     // add layer control object
     L.control.layers({}, {
      // 'Polygon': layerPolygon(map, rc),
-      'Countries': layerCountries(map, rc),
+     // 'Countries': layerCountries(map, rc),
       'Bounds': layerBounds(map, rc, img),// comment this after all coordinates established!
       'Info': layerGeo(map, rc),
-      'Fairy Rings': layerFring(map, rc),               
-      // 'Circles': layerCircles(map, rc)
+      'Fairy Rings': layerFring(map, rc),   
+      'Dueling Ring': layerDuel(map, rc),
+      'Spirit Trees': layerSpirit(map, rc),
+      'Boats': layerBoats(map, rc),               
+      'Canoe Stations': layerCanoe(map, rc),
+      'Gnome Gliders': layerGlider(map, rc),  
+      'Modern Magics': layerMmagic(map, rc),              
+  /*
+      'Amulet of Glory': layerGlory(map, rc),              
+      'Magic Carpets': layerCarp(map, rc),
+      'Small Boats': layerBoaty(map, rc),
+  */               
+// 'Circles': layerCircles(map, rc)
     }).addTo(map)
 
     // the tile layer containing the image generated with gdal2tiles --leaflet ...
@@ -137,7 +148,6 @@ function layerFring (map, rc) {
       iconUrl: imgDir + 'fring-icon.gif',
       iconRetinaUrl: imgDir + 'fring-icon-2x.gif',
       iconSize: [30, 30],
-    //  iconAnchor: [12, 41],
       iconAnchor: [14, 15],
       popupAnchor: [-0, -31],
       shadowUrl: imgDir + 'marker-shadow.png',
@@ -145,7 +155,6 @@ function layerFring (map, rc) {
       shadowAnchor: [14, 41]
     })
     var layerFring = L.geoJson(window.fringInfo, {
-      // correctly map the fringjson coordinates on the image
       coordsToLatLng: function (coords) {
         return rc.unproject(coords)
       },
@@ -164,12 +173,214 @@ function layerFring (map, rc) {
     map.addLayer(layerFring)
     return layerFring
   }
+/* FIN layer Fairy Rings  */
+
+/* BEG layer Dueling Ring */
+function layerDuel (map, rc) {
+    var imgDir = 'images/'
+    var duelMarker = L.icon({
+      iconUrl: imgDir + 'RING-dueling.gif',
+      iconRetinaUrl: imgDir + 'RING-dueling-2x.gif',
+      iconSize: [30, 30],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerDuel = L.geoJson(window.duelInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: duelMarker
+        })
+      }
+    })
+    map.addLayer(layerDuel)
+    return layerDuel
+  }
+/* FIN layer dueling ring */
+
+/* BEG layer spirit trees */
+function layerSpirit (map, rc) {
+    var imgDir = 'images/'
+    var spiritMarker = L.icon({
+      iconUrl: imgDir + 'spirit-30.gif',
+      iconRetinaUrl: imgDir + 'spirit-60.gif',
+      iconSize: [30, 30],
+      iconAnchor: [18, 38],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerSpirit = L.geoJson(window.spiritInfo, {
+      coordsToLatLng: function (coords) {
+      return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: spiritMarker
+        })
+      }
+    })
+    map.addLayer(layerSpirit)
+    return layerSpirit
+  }
+/* FIN layer spirit trees */
+
+/* BEG layer boats */
+function layerBoats (map, rc) {
+    var imgDir = 'images/'
+    var boatsMarker = L.icon({
+      iconUrl: imgDir + 'boat-30.gif',
+      iconRetinaUrl: imgDir + 'boat-60.gif',
+      iconSize: [30, 30],
+      iconAnchor: [18, 18],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerBoats = L.geoJson(window.boatsInfo, {
+        coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: boatsMarker
+        })
+      }
+    })
+    map.addLayer(layerBoats)
+    return layerBoats
+  }
+/* FIN layer boats  */
+
+/* BEG layer canoe */
+function layerCanoe (map, rc) {
+    var imgDir = 'images/'
+    var canoeMarker = L.icon({
+      iconUrl: imgDir + 'canoe-30.gif',
+      iconRetinaUrl: imgDir + 'canoe-60.gif',
+      iconSize: [30, 30],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerCanoe = L.geoJson(window.canoeInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: canoeMarker
+        })
+      }
+    })
+    map.addLayer(layerCanoe)
+    return layerCanoe
+  }
+/* FIN layer canoe */
+
+/* BEG layer glider */
+function layerGlider (map, rc) {
+    var imgDir = 'images/'
+    var gliderMarker = L.icon({
+      iconUrl: imgDir + 'glider-30.gif',
+      iconRetinaUrl: imgDir + 'glider-60.gif',
+      iconSize: [30, 30],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerGlider = L.geoJson(window.gliderInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: gliderMarker
+        })
+      }
+    })
+    map.addLayer(layerGlider)
+    return layerGlider
+  }
+/* FIN layer glider */
+
+/* BEG layer mmagic */
+function layerMmagic (map, rc) {
+    var imgDir = 'images/'
+    var mmagicMarker = L.icon({
+      iconUrl: imgDir + 'mm-30.gif',
+      iconRetinaUrl: imgDir + 'mm-60.gif',
+      iconSize: [30, 30],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerMmagic = L.geoJson(window.mmagicInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: mmagicMarker
+        })
+      }
+    })
+    map.addLayer(layerMmagic)
+    return layerMmagic
+  }
+/* FIN layer mmagic */
+
 
 /**
- * FIN layer Fairy Rings
-*/
-
-  /**
    * layer drawing a polygon
    */
   function layerPolygon (map, rc) {
@@ -232,6 +443,5 @@ function layerFring (map, rc) {
     map.addLayer(layer)
     return layer
   }
-
   init('map')
 }(window))
