@@ -283,8 +283,10 @@ function layerCanoe (map, rc) {
     var canoeMarker = L.icon({
       iconUrl: imgDir + 'canoe-30.gif',
       iconRetinaUrl: imgDir + 'canoe-60.gif',
-      iconSize: [30, 30],
-      iconAnchor: [14, 15],
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      //iconSize: [30, 30],
+      //iconAnchor: [14, 15],
       popupAnchor: [-0, -31],
       shadowUrl: imgDir + 'marker-shadow.png',
       shadowSize: [41, 41],
