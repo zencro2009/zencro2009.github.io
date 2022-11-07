@@ -32,7 +32,8 @@
       'Boats': layerBoats(map, rc),               
       'Canoe Stations': layerCanoe(map, rc),
       'Gnome Gliders': layerGlider(map, rc),  
-      'Modern Magics': layerMmagic(map, rc),              
+      'Modern Magics': layerMmagic(map, rc),
+      'Lunar Magics': layerLmagic(map, rc),               
   /*
       'Amulet of Glory': layerGlory(map, rc),              
       'Magic Carpets': layerCarp(map, rc),
@@ -145,8 +146,8 @@
 function layerFring (map, rc) {
     var imgDir = 'images/'
     var fringMarker = L.icon({
-      iconUrl: imgDir + 'fring-icon.gif',
-      iconRetinaUrl: imgDir + 'fring-icon-2x.gif',
+      iconUrl: imgDir + 'fring-60.gif',
+      iconRetinaUrl: imgDir + 'fring-60.gif',
       iconSize: [30, 30],
       iconAnchor: [14, 15],
       popupAnchor: [-0, -31],
@@ -215,8 +216,10 @@ function layerSpirit (map, rc) {
     var spiritMarker = L.icon({
       iconUrl: imgDir + 'spirit-30.gif',
       iconRetinaUrl: imgDir + 'spirit-60.gif',
-      iconSize: [30, 30],
-      iconAnchor: [18, 38],
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      //iconSize: [30, 30],
+      //iconAnchor: [18, 38],
       popupAnchor: [-0, -31],
       shadowUrl: imgDir + 'marker-shadow.png',
       shadowSize: [41, 41],
@@ -249,8 +252,10 @@ function layerBoats (map, rc) {
     var boatsMarker = L.icon({
       iconUrl: imgDir + 'boat-30.gif',
       iconRetinaUrl: imgDir + 'boat-60.gif',
-      iconSize: [30, 30],
-      iconAnchor: [18, 18],
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      //iconSize: [30, 30],
+      //iconAnchor: [18, 18],
       popupAnchor: [-0, -31],
       shadowUrl: imgDir + 'marker-shadow.png',
       shadowSize: [41, 41],
@@ -353,8 +358,10 @@ function layerMmagic (map, rc) {
     var mmagicMarker = L.icon({
       iconUrl: imgDir + 'mm-30.gif',
       iconRetinaUrl: imgDir + 'mm-60.gif',
-      iconSize: [30, 30],
-      iconAnchor: [14, 15],
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      //iconSize: [30, 30],
+      //iconAnchor: [14, 15],
       popupAnchor: [-0, -31],
       shadowUrl: imgDir + 'marker-shadow.png',
       shadowSize: [41, 41],
@@ -380,6 +387,40 @@ function layerMmagic (map, rc) {
     return layerMmagic
   }
 /* FIN layer mmagic */
+
+/* BEG layer lmagic */
+function layerLmagic (map, rc) {
+    var imgDir = 'images/'
+    var lmagicMarker = L.icon({
+      iconUrl: imgDir + 'lm-30.gif',
+      iconRetinaUrl: imgDir + 'lm-30.gif',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerLmagic = L.geoJson(window.lmagicInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: lmagicMarker
+        })
+      }
+    })
+    map.addLayer(layerLmagic)
+    return layerLmagic
+  }
+/* FIN layer lmagic */
 
 
 /**

@@ -155,7 +155,7 @@ FIN blanks for future */
 // canoes
 window.canoeInfo = [
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Lumbridge<br><strong>Transport to:</strong><br>Champion\'s Guild : via <ul><li>Log,</li><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Barbarian Village : via <ul><li>Dugout,</li><li>Stable Dugout,  </li><li>Waka</li><br></ul>Edgeville : via <ul><li>Dugout,</li> <li>Stable Dugout, </li><li>Waka</li><br></ul>Wilderness Pond : via <ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9993, 7086]} }, 
-{'type': 'Feature', 'properties': {'name': 'Canoe Station : Champion\'s Guild<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Barbarian Village : via <ul><li>Log</li>, <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville :via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond : via <ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9679, 6226]} },
+{'type': 'Feature', 'properties': {'name': 'Canoe Station : Champion\'s Guild<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Barbarian Village : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville :via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond : via <ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9679, 6226]} },
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Barbarian Village<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Champion\'s Guild: via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond via<ul><li>Waka only!</li></ul>)' }, 'geometry': {'type': 'Point', 'coordinates': [8942, 5695]} },  
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Edgeville<br><strong>Transport to:</strong><br>Lumbridge :via<ul><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Champion\'s Guild : via<ul><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Barbarian Village : via<ul><li>Log,</li><li>Dugout,</li><li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond via<ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9098, 4883]} },  
 {'type': 'Feature', 'properties': {'name': 'Canoe Destination : Wilderness Pond<br><center>Dead End</center><br><center>No return trip possible.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [9203, 2567]} } 
@@ -188,21 +188,45 @@ window.mmagicInfo = [
 {'type': 'Feature', 'properties': {'name': 'Modern Magics<br>Player Owned Home<br>Level 40<br>Rellekka<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [5366, 3903]} },
 {'type': 'Feature', 'properties': {'name': 'Modern Magics<br>Player Owned Home<br>Level 40<br>Brimhaven<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [6063, 7572]} },
 {'type': 'Feature', 'properties': {'name': 'Modern Magics<br>Player Owned Home<br>Level 40<br>Yanille<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Brimhaven'}, 'geometry': {'type': 'Point', 'coordinates': [4348, 8231]} }
-
 ]
+
+window.lmagicInfo = [
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Lunar Isle Level 0 Home'}, 'geometry': {'type': 'Point', 'coordinates': [750, 1601]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Moonclan Level 69<br>2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"2 <img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [848, 1595]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ourania lvl 71<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif" 6 <img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [3743, 7015]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Waterbirth lvl 72<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 1 <img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4208, 3019]} },
+
+
+/*{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Varrock Level 25<br>1<img src="./images/rune-fire.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Note : Alternate location in Grand Exchange'}, 'geometry': {'type': 'Point', 'coordinates': [9760, 5549]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Varrock Level 25<br>1<img src="./images/rune-fire.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Note : Alternate location in Varrock Square'}, 'geometry': {'type': 'Point', 'coordinates': [9378, 5130]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Falador Level 37<br>1<img src="./images/rune-water.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Tele Other Falador Level 82<br>1<img src="./images/rune-soul.gif"> 1<img src="./images/rune-water.gif"> 1 <img src="./images/rune-law.gif"><br>'}, 'geometry': {'type': 'Point', 'coordinates': [7757, 5956]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Camelot Level 45<br>5<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Tele Other Camelot Level 90<br>2<img src="./images/rune-soul.gif"> 1<img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [6077, 5142]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ardougne Level 51<br>2<img src="./images/rune-water.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [5304, 6592]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Watchtower Level 58<br>2<img src="./images/rune-earth.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4377, 8107]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Trollheim Level 61<br>2<img src="./images/rune-fire.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [7164, 3522]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ape Atoll Level 64<br>2<img src="./images/rune-fire.gif"> 2<img src="./images/rune-water.gif">2 <img src="./images/rune-law.gif"> 1<img src="./images/banana.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [6095, 10844]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Rimmington<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Taverly, Pollnivneach, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [7647, 7201]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Taverly<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Pollnivneach, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [7162, 5246]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Pollnivneach<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [10789, 9013]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Rellekka<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [5366, 3903]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Brimhaven<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [6063, 7572]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Yanille<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Brimhaven'}, 'geometry': {'type': 'Point', 'coordinates': [4348, 8231]} }
+*/
+]                                           
 
 
 /* NOTES
-{'type': 'Feature', 'properties': {'name': 'Modern Magics<br>
-                                            Ape Atoll Level 64<br>
-                                            2<img src="./images/rune-fire.gif"> 2<img src="./images/rune-water.gif">2 <img src="./images/rune-law.gif"> 1<img src="./images/banana.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4377, 8107]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>
+                                            Waterbirth lvl 72<br>
+                                            2<img src="./images/rune-astral.gif"> 
+                                            1 <img src="./images/rune-law.gif"
+                                            1 <img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4208, 3019]} },
 Lunar Magics
-  -1   Lunar Home lvl 0 (Home)
-  -2   Moonclan lvl 69 astral(2) law(1) earth(2)
-  3   Tele Group Moonclan lvl 70 astral(2) law(1) earth(4)
-  -4   Ourania lvl 71 astral(2) law(1) earth(6)
-  5   Waterbirth lvl 72 astral(2) law(1) water(1)
-  6   Tele Group Waterbirth lvl 73 astral(2) law(1) water(5)
+Tele Group Moonclan Level 70<br>2 <img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 4 <img src="./images/rune-earth.gif"><br>
+
+3   Tele Group Moonclan lvl 70 astral(2) law(1) earth(4)
+
+6   Tele Group Waterbirth lvl 73 astral(2) law(1) water(5)
   -7   Barbarian Outpost lvl 75 astral(2) law(2) fire(3)
   8   Tele Group Barbarian Outpost lvl 76 astral(2) law(2) fire(6)
   -9   Khazard lvl 78 astral(2) law(2) water(4)
