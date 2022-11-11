@@ -48,9 +48,9 @@
   // Fairy Ring definitions [distance from east, distance from north]
     
   window.fringInfo = [
- {'type': 'Feature', 'properties': {'name': 'Piscatoris Fishing Colony<br>Fairy Ring Code: AKQ'}, 'geometry': {'type': 'Point',   'coordinates': [2525, 4007]} }, 
- {'type': 'Feature', 'properties': {'name': 'Poison Waste: DLR <br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [1668, 8197]} }, 
- {'type': 'Feature', 'properties': {'name': 'Penguin Island : AJS <br><center>Dead End.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [3990, 1724]} }, 
+ {'type': 'Feature', 'properties': {'name': '<img src="./gap.png"><br>Piscatoris Fishing Colony<br>Fairy Ring Code: AKQ'}, 'geometry': {'type': 'Point',   'coordinates': [2525, 4007]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Poison Waste: DLR <br><center>Dead End.</center><br><br><a href="./hi.html">Click here for the Travel Guide</a>' }, 'geometry': {'type': 'Point', 'coordinates': [1668, 8197]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Penguin Island : AJS <br><center>Dead End.</center>'}, 'geometry': {'type': 'Point', 'coordinates': [3990, 1724]} }, 
  {'type': 'Feature', 'properties': {'name': 'South of Castle Wars : BKP' }, 'geometry': {'type': 'Point', 'coordinates': [3060, 8716]} }, 
  {'type': 'Feature', 'properties': {'name': 'Feldip Hills : AKS' }, 'geometry': {'type': 'Point', 'coordinates': [4565, 9356]} }, 
  {'type': 'Feature', 'properties': {'name': 'Hazelmere\'s Island : CLS' }, 'geometry': {'type': 'Point', 'coordinates': [5464, 8343]} },  
@@ -83,7 +83,8 @@
  {'type': 'Feature', 'properties': {'name': 'Abyssal Space : ALR' }, 'geometry': {'type': 'Point', 'coordinates': [2500, 1350]} },  
  {'type': 'Feature', 'properties': {'name': 'Caves South of Dorgesh-Kaan : AJQ' }, 'geometry': {'type': 'Point', 'coordinates': [2500, 1400]} }
  ]
-  
+ 
+ 
 // dueling ring
 window.duelInfo = [
  {'type': 'Feature', 'properties': {'name': 'Dueling Ring, Castle Wars Arena'}, 'geometry': {'type': 'Point',   'coordinates': [3521, 8280]} }, 
@@ -91,6 +92,25 @@ window.duelInfo = [
  {'type': 'Feature', 'properties': {'name': 'Dueling Ring, Fist of Guthix<br><center>Underground</center>' }, 'geometry': {'type': 'Point', 'coordinates': [9981, 4365]} } 
  ]
 
+ // glory
+window.gloryInfo = [
+ {'type': 'Feature', 'properties': {'name': 'Amulet of Glory, Edgeville'}, 'geometry': {'type': 'Point',   'coordinates': [8743, 5011]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Amulet of Glory, Karamja' }, 'geometry': {'type': 'Point', 'coordinates': [7375, 7601]} },
+ {'type': 'Feature', 'properties': {'name': 'Amulet of Glory, Al Kharid' }, 'geometry': {'type': 'Point', 'coordinates': [10491, 8049]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Amulet of Glory, Draynor Village' }, 'geometry': {'type': 'Point', 'coordinates': [8883, 6907]} } 
+ ]
+  
+ // games
+window.gamesInfo = [
+ {'type': 'Feature', 'properties': {'name': 'Games Necklace, Clan Wars'}, 'geometry': {'type': 'Point',   'coordinates': [10210, 3442]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Games Necklace, Burthorpe Games Room' }, 'geometry': {'type': 'Point', 'coordinates': [7216, 4458]} },
+ {'type': 'Feature', 'properties': {'name': 'Games Necklace, Barbarian Outpost' }, 'geometry': {'type': 'Point', 'coordinates': [4156, 4390]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Games Necklace, Wilderness Volcano' }, 'geometry': {'type': 'Point', 'coordinates': [9486, 3461]} }, 
+ {'type': 'Feature', 'properties': {'name': 'Games Necklace, Corporeal Beast<br><center>(Underground)</center><br><center>Note: No teleport out.</center>'}, 'geometry': {'type': 'Point', 'coordinates': [9753, 2680]} } 
+  ]  
+  
+  
+  
 //spirit trees 
 window.spiritInfo = [
  {'type': 'Feature', 'properties': {'name': 'Spirit Tree, Grand Exchange<br><strong>Teleports to:</strong><br>Tree Gnome Village<br>Tree Gnome Stronghold<br>Battlefield of Khazard'}, 'geometry': {'type': 'Point',   'coordinates': [9536, 4894]} }, 
@@ -156,7 +176,7 @@ FIN blanks for future */
 window.canoeInfo = [
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Lumbridge<br><strong>Transport to:</strong><br>Champion\'s Guild : via <ul><li>Log,</li><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Barbarian Village : via <ul><li>Dugout,</li><li>Stable Dugout,  </li><li>Waka</li><br></ul>Edgeville : via <ul><li>Dugout,</li> <li>Stable Dugout, </li><li>Waka</li><br></ul>Wilderness Pond : via <ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9993, 7086]} }, 
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Champion\'s Guild<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Barbarian Village : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville :via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond : via <ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9679, 6226]} },
-{'type': 'Feature', 'properties': {'name': 'Canoe Station : Barbarian Village<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Champion\'s Guild: via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond via<ul><li>Waka only!</li></ul>)' }, 'geometry': {'type': 'Point', 'coordinates': [8942, 5695]} },  
+{'type': 'Feature', 'properties': {'name': 'Canoe Station : Barbarian Village<br><strong>Transport to:</strong><br>Lumbridge : via <ul><li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Champion\'s Guild: via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Edgeville : via <ul><li>Log,</li> <li>Dugout,</li> <li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond via<ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [8942, 5695]} },  
 {'type': 'Feature', 'properties': {'name': 'Canoe Station : Edgeville<br><strong>Transport to:</strong><br>Lumbridge :via<ul><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Champion\'s Guild : via<ul><li>Dugout,</li><li>Stable Dugout,</li><li>Waka</li></ul><br>Barbarian Village : via<ul><li>Log,</li><li>Dugout,</li><li>Stable Dugout,</li> <li>Waka</li></ul><br>Wilderness Pond via<ul><li>Waka only!</li></ul>' }, 'geometry': {'type': 'Point', 'coordinates': [9098, 4883]} },  
 {'type': 'Feature', 'properties': {'name': 'Canoe Destination : Wilderness Pond<br><center>Dead End</center><br><center>No return trip possible.</center>' }, 'geometry': {'type': 'Point', 'coordinates': [9203, 2567]} } 
  ]
@@ -168,7 +188,7 @@ window.gliderInfo = [
 {'type': 'Feature', 'properties': {'name': 'Gnome glider: Sindarpos (White Wolf Mountain) :<br>Captain Bleemadge<br><br><strong>Transport to:</strong><br>Ta Quir Priw (Tree Gnome Stronghold)<br>Lemantolly Undri (Feldip Hills)<br>Gandius (Eastern Karamja)<br>Lemanto Andra (Dig site)<br>Kar-Hewo (Al Kharid)'}, 'geometry': {'type': 'Point', 'coordinates': [6821, 4953]} },
 {'type': 'Feature', 'properties': {'name': 'Gnome glider: Lemanto Andra (Dig site) : Dead End<br>'}, 'geometry': {'type': 'Point', 'coordinates': [10657, 5522]} },
 {'type': 'Feature', 'properties': {'name': 'Gnome glider: Kar-Hewo (Al Kharid) :<br>Captain Dalbur<br><br><strong>Transport to:</strong><br>Ta Quir Priw (Tree Gnome Stronghold)<br>Lemantolly Undri (Feldip Hills)<br>Gandius (Eastern Karamja)<br>Sindarpos (White Wolf Mountain)<br>Lemanto Andra (Dig site)'}, 'geometry': {'type': 'Point', 'coordinates': [10317, 7293]} },
-{'type': 'Feature', 'properties': {'name': 'Gnome glider: Lemantolly Undri (Feldip Hills) : Dead End<br>'}, 'geometry': {'type': 'Point', 'coordinates': [4331, 9250]} },
+{'type': 'Feature', 'properties': {'name': 'Gnome glider: Lemantolly Undri (Feldip Hills)<br><center>Dead End</center>'}, 'geometry': {'type': 'Point', 'coordinates': [4331, 9250]} },
 {'type': 'Feature', 'properties': {'name': 'Gnome glider: Ta Quir Priw (Tree Gnome Stronghold) :<br>Captain Errdo<br><br><strong>Transport to:</strong><br>Lemantolly Undri (Feldip Hills)<br>Gandius (Eastern Karamja)<br>Sindarpos (White Wolf Mountain)<br>Lemanto Andra (Dig site)<br>Kar-Hewo (Al Kharid)  '}, 'geometry': {'type': 'Point', 'coordinates': [3675, 4938]} },
 ]
 
@@ -192,62 +212,30 @@ window.mmagicInfo = [
 
 window.lmagicInfo = [
 {'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Lunar Isle Level 0 Home'}, 'geometry': {'type': 'Point', 'coordinates': [750, 1601]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Moonclan Level 69<br>2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"2 <img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [848, 1595]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ourania lvl 71<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif" 6 <img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [3743, 7015]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Waterbirth lvl 72<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 1 <img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4208, 3019]} },
-
-
-/*{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Varrock Level 25<br>1<img src="./images/rune-fire.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Note : Alternate location in Grand Exchange'}, 'geometry': {'type': 'Point', 'coordinates': [9760, 5549]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Varrock Level 25<br>1<img src="./images/rune-fire.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Note : Alternate location in Varrock Square'}, 'geometry': {'type': 'Point', 'coordinates': [9378, 5130]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Falador Level 37<br>1<img src="./images/rune-water.gif"> 3<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Tele Other Falador Level 82<br>1<img src="./images/rune-soul.gif"> 1<img src="./images/rune-water.gif"> 1 <img src="./images/rune-law.gif"><br>'}, 'geometry': {'type': 'Point', 'coordinates': [7757, 5956]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Camelot Level 45<br>5<img src="./images/rune-air.gif"> 1 <img src="./images/rune-law.gif"><br>Tele Other Camelot Level 90<br>2<img src="./images/rune-soul.gif"> 1<img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [6077, 5142]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ardougne Level 51<br>2<img src="./images/rune-water.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [5304, 6592]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Watchtower Level 58<br>2<img src="./images/rune-earth.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4377, 8107]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Trollheim Level 61<br>2<img src="./images/rune-fire.gif"> 2 <img src="./images/rune-law.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [7164, 3522]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ape Atoll Level 64<br>2<img src="./images/rune-fire.gif"> 2<img src="./images/rune-water.gif">2 <img src="./images/rune-law.gif"> 1<img src="./images/banana.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [6095, 10844]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Rimmington<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Taverly, Pollnivneach, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [7647, 7201]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Taverly<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Pollnivneach, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [7162, 5246]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Pollnivneach<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Rellekka, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [10789, 9013]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Rellekka<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Brimhaven, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [5366, 3903]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Brimhaven<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Yanille'}, 'geometry': {'type': 'Point', 'coordinates': [6063, 7572]} },
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Player Owned Home<br>Level 40<br>Yanille<br>1<img src="./images/rune-law.gif"> 3<img src="./images/rune-air.gif">  1<img src="./images/rune-earth.gif"><br>Note: alternates of Rimmington, Taverly, Pollnivneach, Rellekka, Brimhaven'}, 'geometry': {'type': 'Point', 'coordinates': [4348, 8231]} }
-*/
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Moonclan Level 69<br>2<img src="./images/rune-astral.gif"> 1<img src="./images/rune-law.gif"> 2<img src="./images/rune-earth.gif"><br>Tele Group Moonclan lvl 70<br>2<img src="./images/rune-astral.gif"> 1<img src="./images/rune-law.gif"> 4<img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [848, 1595]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ourania lvl 71<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 6 <img src="./images/rune-earth.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [3743, 7015]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Waterbirth lvl 72<br> 2<img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 1 <img src="./images/rune-water.gif"><br>Tele Group Waterbirth lvl 73<br>2<img src="./images/rune-astral.gif"> 1<img src="./images/rune-law.gif"> 5<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4208, 3019]} },
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Barbarian lvl 75<br>2<img src="./images/rune-astral.gif"> 2<img src="./images/rune-law.gif"> 3<img src="./images/rune-fire.gif"><br>Tele Group Barbarian lvl 76<br>2<img src="./images/rune-astral.gif"> 2<img src="./images/rune-law.gif"> 6<img src="./images/rune-fire.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4350, 4381]} }, 
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Khazard lvl lvl 78 <br>2<img src="./images/rune-astral.gif"> 2<img src="./images/rune-law.gif"> 4<img src="./images/rune-water.gif"><br>Tele Group Khazard lvl 79<br>2<img src="./images/rune-astral.gif"> 2<img src="./images/rune-law.gif"> 8<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [5255, 7748]} },  
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Fishing Guild lvl 85<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 10<img src="./images/rune-water.gif"><br>Tele Group Fishing Guild lvl 86<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 14<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4897, 5848]} },  
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Catherby lvl 87<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 10<img src="./images/rune-water.gif"><br>Tele Group Catherby lvl 88<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 15<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [6451, 5510]} },  
+{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>Ice Plateau lvl 89<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 8<img src="./images/rune-water.gif"><br>Tele Group Ice Plateau lvl 90<br>3<img src="./images/rune-astral.gif"> 3<img src="./images/rune-law.gif"> 16<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [7785, 1914]} },   
 ]                                           
 
 
+window.amagicInfo = [
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Edgeville lvl 0 Home'}, 'geometry': {'type': 'Point', 'coordinates': [8724, 5009]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Paddewwa  lvl 54<br>2<img src="./images/rune-law.gif">  1<img src="./images/rune-fire.gif">  1<img src="./images/rune-air.gif"><br><center>(Underground, Edgeville Dungeon)</center>'}, 'geometry': {'type': 'Point', 'coordinates': [8822, 5209]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Senntisten  lvl 60<br>2<img src="./images/rune-law.gif">  1<img src="./images/rune-soul.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [10625, 6275]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Kharyrll  lvl 66<br>2<img src="./images/rune-law.gif">  1<img src="./images/rune-blood.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [12025, 5188]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Lassar  lvl 72<br>2<img src="./images/rune-law.gif">  4<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [8056, 5208]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Dareeyak  lvl 78<br>2<img src="./images/rune-law.gif">  3<img src="./images/rune-fire.gif">  2<img src="./images/rune-air.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [7752, 3361]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Carrallangar  lvl 84<br>2<img src="./images/rune-law.gif">  2<img src="./images/rune-soul.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [9364, 3629]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Annakarl  lvl 90<br>2<img src="./images/rune-law.gif">  2<img src="./images/rune-blood.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [10356, 1854]} },
+{'type': 'Feature', 'properties': {'name': 'Ancient Magics<br>Ghorrock  lvl 96<br>2<img src="./images/rune-law.gif">  2<img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [7806, 1918]} },
+]                                           
+
 /* NOTES
-{'type': 'Feature', 'properties': {'name': 'Lunar Magics<br>
-                                            Waterbirth lvl 72<br>
-                                            2<img src="./images/rune-astral.gif"> 
-                                            1 <img src="./images/rune-law.gif"
-                                            1 <img src="./images/rune-water.gif">'}, 'geometry': {'type': 'Point', 'coordinates': [4208, 3019]} },
-Lunar Magics
-Tele Group Moonclan Level 70<br>2 <img src="./images/rune-astral.gif"> 1 <img src="./images/rune-law.gif"> 4 <img src="./images/rune-earth.gif"><br>
-
-3   Tele Group Moonclan lvl 70 astral(2) law(1) earth(4)
-
-6   Tele Group Waterbirth lvl 73 astral(2) law(1) water(5)
-  -7   Barbarian Outpost lvl 75 astral(2) law(2) fire(3)
-  8   Tele Group Barbarian Outpost lvl 76 astral(2) law(2) fire(6)
-  -9   Khazard lvl 78 astral(2) law(2) water(4)
-  10  Telegroup Khazard lvl 79 astral(2) law(2) water(8)
-  11  Fishing Guild lvl 85 astral(3) law(3) water(10)
-  12  Telegroup Fishing Guild lvl 86 astral(3) law(3) water(14) 
-  13  Catherby lvl 87 astral(3) law(3) water(10)
-  14  Telegroup Catherby lvl 88 astral(3) law(3) water(15)
-  15  Ice Plateau lvl 89 astral(3) law(3) water(8)
-  16  Telegroup Ice Plateau lvl 90 astral(3) law(3) water(16)
-
-Ancient Magics
- 1   Edgeville lvl 0 (Home)
- 2   Paddewwa lvl 54 law(2) fire(1) air(3)
- 3   Senntisten lvl 60 law(2) soul(1)
- 4   Kharyrll lvl 66 law(2) blood(1)
- 5   Lassar lvl 72 law(2) water(4)
- 6   Dareeyak lvl 78 law(2) fire(3) air(2)
- 7   Carrallangar lvl 84 law(2) soul(2)
- 8   Annakarl lvl 90 law(2) blood(2)
- 9   Ghorrock lvl 96 law(2) water(8)
     
 Note: Entrana Teleports to Wilderness at  9732, 2823 north west of Ruins Level 31
 */

@@ -6,6 +6,7 @@
     var img = [
       15104,
       12800
+      
     ]
 
     // create the map
@@ -33,11 +34,14 @@
       'Canoe Stations': layerCanoe(map, rc),
       'Gnome Gliders': layerGlider(map, rc),  
       'Modern Magics': layerMmagic(map, rc),
-      'Lunar Magics': layerLmagic(map, rc),               
+      'Lunar Magics': layerLmagic(map, rc),
+      'Ancient Magics': layerAmagic(map, rc),               
+      'Glory Amulet': layerGlory(map, rc), 
+      'Games Necklace': layerGames(map, rc),                              
   /*
-      'Amulet of Glory': layerGlory(map, rc),              
       'Magic Carpets': layerCarp(map, rc),
       'Small Boats': layerBoaty(map, rc),
+
   */               
 // 'Circles': layerCircles(map, rc)
     }).addTo(map)
@@ -176,6 +180,10 @@ function layerFring (map, rc) {
   }
 /* FIN layer Fairy Rings  */
 
+
+/* BEG NESTED LAYER GROUP EXPERIMENT */
+
+
 /* BEG layer Dueling Ring */
 function layerDuel (map, rc) {
     var imgDir = 'images/'
@@ -207,16 +215,60 @@ function layerDuel (map, rc) {
     })
     map.addLayer(layerDuel)
     return layerDuel
+}
+    /* FIN layer dueling ring */
+
+
+/* BEG layer games necklace */
+function layerGames (map, rc) {
+    var imgDir = 'images/'
+    var gamesMarker = L.icon({
+      iconUrl: imgDir + 'NECK-games.png',
+      iconRetinaUrl: imgDir + 'NECK-games.png',
+      iconSize: [30, 30],
+      iconAnchor: [14, 15],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerGames = L.geoJson(window.gamesInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: gamesMarker
+        })
+      }
+    })
+    map.addLayer(layerGames)
+    return layerGames
   }
-/* FIN layer dueling ring */
+/* FIN layer games necklace */
+
+/* FIN NESTED LAYER GROUP EXPERIMENT */
+
+
+
+
+
+
 
 /* BEG layer spirit trees */
 function layerSpirit (map, rc) {
     var imgDir = 'images/'
     var spiritMarker = L.icon({
-      iconUrl: imgDir + 'spirit-30.gif',
+      iconUrl: imgDir + 'spirit-30.png',
       iconRetinaUrl: imgDir + 'spirit-60.gif',
-      iconSize: [25, 41],
+      //iconSize: [25, 41],
+      iconSize: [41, 41],
       iconAnchor: [12, 41],
       //iconSize: [30, 30],
       //iconAnchor: [18, 38],
@@ -288,7 +340,8 @@ function layerCanoe (map, rc) {
     var canoeMarker = L.icon({
       iconUrl: imgDir + 'canoe-30.gif',
       iconRetinaUrl: imgDir + 'canoe-60.gif',
-      iconSize: [25, 41],
+      iconSize: [41, 41],
+      //iconSize: [25, 41],
       iconAnchor: [12, 41],
       //iconSize: [30, 30],
       //iconAnchor: [14, 15],
@@ -422,6 +475,77 @@ function layerLmagic (map, rc) {
   }
 /* FIN layer lmagic */
 
+/* BEG layer amagic */
+function layerAmagic (map, rc) {
+    var imgDir = 'images/'
+    var amagicMarker = L.icon({
+      iconUrl: imgDir + 'am-30.gif',
+      iconRetinaUrl: imgDir + 'am-30.gif',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerAmagic = L.geoJson(window.amagicInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: amagicMarker
+        })
+      }
+    })
+    map.addLayer(layerAmagic)
+    return layerAmagic
+  }
+/* FIN layer amagic */
+
+
+
+
+/* BEG layer glory */
+function layerGlory (map, rc) {
+    var imgDir = 'images/'
+    var gloryMarker = L.icon({
+      iconUrl: imgDir + 'AMULET-glory.png',
+      iconRetinaUrl: imgDir + 'glory-40x59-2.gif',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerGlory = L.geoJson(window.gloryInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: gloryMarker
+        })
+      }
+    })
+    map.addLayer(layerGlory)
+    return layerGlory
+  }
+
+/* FIN layer glory */
 
 /**
    * layer drawing a polygon
