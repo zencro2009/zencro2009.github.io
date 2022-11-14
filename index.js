@@ -25,7 +25,7 @@
     L.control.layers({}, {
      // 'Polygon': layerPolygon(map, rc),
      // 'Countries': layerCountries(map, rc),
-      'Bounds': layerBounds(map, rc, img),// comment this after all coordinates established!
+     // 'Bounds': layerBounds(map, rc, img),// comment this after all coordinates established!
       'Info': layerGeo(map, rc),
       'Fairy Rings': layerFring(map, rc),   
       'Dueling Ring': layerDuel(map, rc),
