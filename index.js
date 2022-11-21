@@ -37,12 +37,18 @@
       'Lunar Magics': layerLmagic(map, rc),
       'Ancient Magics': layerAmagic(map, rc),               
       'Glory Amulet': layerGlory(map, rc), 
-      'Games Necklace': layerGames(map, rc),                              
-  /*
+      'Games Necklace': layerGames(map, rc),  
       'Magic Carpets': layerCarp(map, rc),
-      'Small Boats': layerBoaty(map, rc),
-
-  */               
+//'Small Boats': layerBoaty(map, rc),
+'Mine Carts': layerMinec(map, rc),
+'Essence mining': layerEssmin(map, rc),
+//'Ring of Wealth': layerRingwe(map, rc), /*note grand exchange ONLY*/
+//'Ring of Slaying': layerRingsl(map, rc), /*summona Pollnivneach, Morytania Slayer Tower, Rellekka Slayer caves */
+//'Balloons': layerBalloon(map, rc),
+//'Pharaoh\'s Scepter': layerPscept(map, rc),
+//'Stronghold Scepter': layerSscept(map, rc),
+//'Ectophial': layerEcto(map, rc),               
+                     
 // 'Circles': layerCircles(map, rc)
     }).addTo(map)
 
@@ -546,6 +552,110 @@ function layerGlory (map, rc) {
   }
 
 /* FIN layer glory */
+
+ /* BEG Carpets */
+/* BEG layer carp */
+function layerCarp (map, rc) {
+    var imgDir = 'images/'
+    var carpMarker = L.icon({
+      iconUrl: imgDir + 'carp.png',
+      iconRetinaUrl: imgDir + 'carp.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerCarp = L.geoJson(window.carpInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: carpMarker
+        })
+      }
+    })
+    map.addLayer(layerCarp)
+    return layerCarp
+  }
+
+/* FIN layer carp */
+/* BEG layer minec */
+function layerMinec (map, rc) {
+    var imgDir = 'images/'
+    var minecMarker = L.icon({
+      iconUrl: imgDir + 'minecart.png',
+      iconRetinaUrl: imgDir + 'minecart.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerMinec = L.geoJson(window.minecInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: minecMarker
+        })
+      }
+    })
+    map.addLayer(layerMinec)
+    return layerMinec
+  }
+
+/* FIN layer minec */
+
+  /* BEG Essence Mining */
+function layerEssmin (map, rc) {
+    var imgDir = 'images/'
+    var essminMarker = L.icon({
+      iconUrl: imgDir + 'essmin.png',
+      iconRetinaUrl: imgDir + 'essmin.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [-0, -31],
+      shadowUrl: imgDir + 'marker-shadow.png',
+      shadowSize: [41, 41],
+      shadowAnchor: [14, 41]
+    })
+    var layerEssmin = L.geoJson(window.essminInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: essminMarker
+        })
+      }
+    })
+    map.addLayer(layerEssmin)
+    return layerEssmin
+  }
+  /* FIN Essence Mining */
 
 /**
    * layer drawing a polygon
