@@ -3,33 +3,180 @@
   <head>
     <title>2009Scape World Transportation Map</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" /> -->
-    <link rel="stylesheet" href="./leaflet.css" />
+
+<!-- BEG overlay head -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#overlay {
+  position: fixed; 
+  /* position: overflow; */
+  display: on;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: #000000;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+</style>    
+    
+<!-- FIN overlay head -->
+
+<link rel="stylesheet" href="./leaflet.css" />
     <style>
-      html, body, #map {
-        width:100%;
-        height:100%;
-        margin:0;
-        padding:0;
-        background-color: #B0B0B0
-      }
-#borderimg {
-width: 300px;
-border: 10px solid transparent;
-padding: 15px;
-border-image: url(./box-81.png) 30 stretch;
-box-shadow: 10px 10px 10px #999;
-background-color: #bbab8c;
-}       
-    </style>
+.lborder_background {
+background-image: url(./images/lborder.jpg);
+}
+.rborder_background {
+background-image: url(./images/rborder.jpg);
+}
+.iborder{
+background-image: url(./dialog/2009-bg_scroll.png);
+width: 850px;
+background-color: black;
+vertical-align: top; 
+}
+.container {
+  height: 450px;
+  width: 850px;
+}
+.bcontainer {
+  border: 0px;
+  background-image: url(./dialog/2009-bg_footer.png);
+  background-color:#876a38;
+  width: 850px;
+  height: 71px;
+ }
+.center {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.center > span {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+}
+
+.litd {
+background-image: url(./dialog/2009lbarcap.png);
+width: 157;
+height: 26px;
+}
+
+.citd{
+background-image: url(./dialog/2009bar.png);
+width: 916px;
+height: 26px;
+}
+
+.ritd{
+background-image: url(./dialog/2009rbarcap.png);
+width: 157;
+height: 26px;
+}
+
+msg { 
+  background: green;
+  border-radius: 10px;
+  padding: 20px; 
+   
+}
+
+
+</style>
   </head>
-  <body>
-    <div id="map"></div>
-    <!-- <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script> -->
-    <script src="./leaflet.js"></script> 
-    <script src="rastercoords.js"></script>
-    <script src="geojson.js"></script>
-    <script src="index.js"></script>
-  </body>
+<body style="background-color:black;">
+
+<!-- BEG overlay body -->
+
+<div id="overlay" onclick="off()">
+  <msg id="text">
+  Welcome to the 2009Scape World Transportation map.<br>
+  
+  <p>For those already familiar with how to use Leaflet maps, feel free to click anywhere on this
+  screen to close this window and proceed to the map.</p>
+  
+  <p>Leaflet maps are made up with <strong>layers</strong> which allow you to select the elements you wish to
+  locate on the map.  By clicking the layer control box (designated with the number "1" below) you can choose
+  which layers you want to see. </p>
+ 
+  You can pan around the map using your pointer device and zoom in and out using either your mouse wheel or
+  using the "+" and "-" buttons in the zoom control (designated with the number "2" below).
+  <table>
+  <tr>
+  <td><img src="./dialog/tutorial.png">
+  </td>
+  </tr>
+  </table>
+  Clicking on the icons displayed will give some information regarding what they represent and in some
+  cases additional information may be present.
+  </msg>
+</div>
+
+<!--<div style="padding:20px">
+  page header goes here if desired
+  </div> -->
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+<!-- FIN overlay body -->
+
+    <script src = "./leaflet.js"></script>
+    <div align="center">
+    <table width="1164">
+   <tr>
+      <td colspan="3">
+          <table width="1164">
+              <td class="litd"></td>   
+              <td class="citd"><center><font color="yellow"><strong>2009Scape's World Transportation Map</strong></font></center></td>
+              <td class="ritd"></td>
+         </table>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="lborder_background" width="157"></td>
+      <td class="iborder">
+      <div class="container">
+      <div class="center">
+      <span><iframe src="./worldmap.html"  height="400" width="800"></iframe>
+      </span>
+      </div>
+      </div>
+      </td>
+      <td rowspan="2" class="rborder_background" width="157"></td>
+   </tr>
+    <tr>
+      <td>
+      <div class="bcontainer">
+            <br><center><img src="./dialog/2009-logo-footer-dark.png"></center>
+      </div>
+      </td>
+   </tr>
+    </table>
+ </div>
+</body>
 </html>

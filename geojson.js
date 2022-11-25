@@ -104,6 +104,32 @@ window.duelInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dueling Ring, Fist of Guthix<br><center>Underground</center></div>'}, 'geometry': {'type': 'Point', 'coordinates': [9981, 4365]} } 
  ]
 
+ // ring of slaying
+window.ringslInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Summona in Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10567, 9344]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Morytania Slayer Tower</div>'}, 'geometry': {'type': 'Point', 'coordinates': [11509, 4698]} },
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Rellekka Slayer Caves</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6365, 4024]} } 
+ ]
+ 
+ 
+ window.ringweInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Wealth, Grand Exchange</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9370,5261]} } 
+ ]
+
+ window.ssceptInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold Scepter</div>'}, 'geometry': {'type': 'Point', 'coordinates': [8701,5639]} } 
+ ]
+
+ 
+ 
+ window.ectoInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ectophial, Ectofuntus</div>'}, 'geometry': {'type': 'Point', 'coordinates': [13352,4776]} } 
+ ]
+
+window.digInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Digsite pendant, North of Digsite</div>'}, 'geometry': {'type': 'Point', 'coordinates': [10789, 5418]} } 
+ ]
+
  // glory
 window.gloryInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Edgeville</div>'}, 'geometry': {'type': 'Point',   'coordinates': [8743, 5011]} }, 
@@ -120,6 +146,17 @@ window.gamesInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Games Necklace, Wilderness Volcano</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9486, 3461]} }, 
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Games Necklace, Corporeal Beast<br><center>(Underground)</center><br><center>Note: No teleport out.</center></div>'}, 'geometry': {'type': 'Point', 'coordinates': [9753, 2680]} } 
   ]  
+
+  
+ // games
+window.skillsInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Skills Necklace, Fishing Guild</div>'}, 'geometry': {'type': 'Point',   'coordinates': [4879,5856]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Skills Necklace, Cooking Guild</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9199,5437]} },
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Skills Necklace, Crafting Guild</div>'}, 'geometry': {'type': 'Point', 'coordinates': [7497,6668]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Skills Necklace, Mining Guild</div>'}, 'geometry': {'type': 'Point', 'coordinates': [8172,6282]} } 
+ ]  
+  
+  
   
   
   
@@ -178,6 +215,16 @@ window.canoeInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Canoe Destination : Wilderness Pond<br>Dead End<br>No return trip possible.</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9203, 2567]} } 
  ]
 
+ 
+window.psceptInfo = [
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pharaoh\'s Scepter : Jalsavrah<br><center>(inside Pyramid plunder)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [10370,10665]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pharaoh\'s Scepter : Jaleustrophos<br><center>(outside Agility Pyramid)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [10814,10425]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pharaoh\'s Scepter : Jaldraocht<br><center>(entrance to Desert Pyramid)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [9921,9838]} }
+]
+
+ 
+ 
+ 
 window.gliderInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Gnome glider: Crash Island :<br>Captain Errdo<br><br><strong>NOT IMPLEMENTED YET</strong><br><br><strong>Transport to:</strong><br>Ta Quir Priw (Tree Gnome Stronghold)<br>Lemantolly Undri (Feldip Hills)<br>Gandius (Eastern Karamja)<br>Sindarpos (White Wolf Mountain)<br>Lemanto Andra (Dig site)<br>Kar-Hewo (Al Kharid)</div>'}, 'geometry': {'type': 'Point', 'coordinates': [7181, 11270]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Gnome glider: Gandius (South Eastern Karamja) :<br>Captain Bleemadge<br><br><strong>NOT IMPLEMENTED YET</strong><br><br><strong>Transport to:</strong><br>Ta Quir Priw (Tree Gnome Stronghold)Lemantolly Undri (Feldip Hills)<br>Gandius (Eastern Karamja)<br>Sindarpos (White Wolf Mountain)<br>Lemanto Andra (Dig site)<br>Kar-Hewo (Al Kharid)</div>'}, 'geometry': {'type': 'Point', 'coordinates': [7824, 9294]} },
@@ -232,19 +279,15 @@ window.amagicInfo = [
 ]                                           
 
 window.carpInfo = [
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet: Shantay Pass<br><strong>Transport to:</strong><ul><li>Uzer 200 gp<li>Bedabin Camp 200 gp<li>North Pollniveach 200 gp</ul></div>'}, 'geometry': {'type': 'Point', 'coordinates': [10560, 8154]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet: Shantay Pass<br><strong>Transport to:</strong><ul><li>Uzer 200 gp<li>Bedabin Camp 200 gp<li>North Pollnivneach 200 gp</ul></div>'}, 'geometry': {'type': 'Point', 'coordinates': [10560, 8154]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Bedabin Camp<br>Transport to:<br>Return to Shantay</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9524,8682] } } ,
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : North Pollniveach<br>Transport to:<br>Return to Shantay</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10884, 9017] } } , 
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : South Pollniveach<br>Transport (200 gp) to:<br>Nardah<br>Sophanem</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10838, 9486]  } } ,
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : North Pollnivneach<br>Transport to:<br>Return to Shantay</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10884, 9017] } } , 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : South Pollnivneach<br>Transport (200 gp) to:<br>Nardah<br>Sophanem</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10838, 9486]  } } ,
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Uzer<br>Transport to:<br>Return to Shantay</div>'}, 'geometry': {'type': 'Point',   'coordinates': [11834, 8127] } } ,
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Nardah<br>Transport to:<br>Return to South Pollniveach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [11274, 9703]  } } ,
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Sophanem<br>Transport to:<br>Return to South Pollniveach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10375, 10530]  } } 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Nardah<br>Transport to:<br>Return to South Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [11274, 9703]  } } ,
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Magic Carpet : Sophanem<br>Transport to:<br>Return to South Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10375, 10530]  } } 
 ]
     
-   
-
-
-
 window.minecInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Grand Exchange<br>Gnome Mining Cart<br><strong>Transportation to:</strong><br>Keldagrim<br>(Only available after previously visiting the site.)</div>'}, 'geometry': {'type': 'Point',   'coordinates': [9192, 4913]}},
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Keldagrim<br>Gnome Mining Cart<br><strong>Transportation to:</strong><br>Grand Exchange<br>White Wolf Mountain<br>Ice Mountain<br>(Underground)</div>'}, 'geometry': {'type': 'Point',   'coordinates': [5870, 3290]}},
@@ -259,16 +302,138 @@ window.essminInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Essence Mine Teleport<br>Yanille : Distentor <br>(Lvl 66 Magic required)</div>'}, 'geometry': {'type': 'Point',   'coordinates': [4712, 8341]} },
 ]
 
-/*
-window.ringweInfo = [
+window.combbInfo = [
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Combat Bracelet<br>Champion\'s Guild</div>'}, 'geometry': {'type': 'Point',   'coordinates': [9588,6071]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Combat Bracelet<br>Monastery</div>'}, 'geometry': {'type': 'Point',   'coordinates': [8459,5199]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Combat Bracelet<br>Ranging Guild</div>'}, 'geometry': {'type': 'Point',   'coordinates': [5266,5467]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Combat Bracelet<br>Warrior\'s Guild</div>'}, 'geometry': {'type': 'Point',   'coordinates': [7058,4597]} }
+]
+
+
+window.dungeonInfo = [
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ogre Enclave                        <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 100]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Jiggig                              <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 150]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lighthouse                          <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 200]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Underground Pass                    <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 250]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Temple of Light                     <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 300]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Kharazi Dungeon                     <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 350]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Experiment Cave                     <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 400]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Meiyerditch Dungeon                 <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 450]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Temple of Marimbo Dungeon           <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 500]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Evil Chicken\'s Lair                <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 550]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Grand Tree Tunnels                  <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 600]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ice Troll Caves                     <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 650]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lunar Isle Mine                     <br><center>(Not Yet implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 700]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Mahjarrat Ritual Site Cavern        <br><center>(Not yet implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 750]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Poison Waste Slayer Dungeon         <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 800]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Underwater Tunnel                   <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 850]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Gu\'Tanoth                          <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 900]} },
+
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Asgarnian Ice Caves                 </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8101,7804]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Taverley Dungeon                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7103,5782]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Falador Mole Lair                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7954,5954]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brine Rat Cavern                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1100]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Fremennik Slayer Dungeon            </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6392,4030]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Keldagrim                           </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5867,3235]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Temple of Ikov                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5429,5740]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ourania Cave                        </div>'}, 'geometry': {'type': 'Point',   'coordinates': [3626,7114]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brimhaven Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5965,7783]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Karamja and Crandor Dungeon<br>Karamja entrance</div>'}, 'geometry': {'type': 'Point',   'coordinates': [6879,7658]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Karamja and Crandor Dungeon<br>Crandor entrance</div>'}, 'geometry': {'type': 'Point',   'coordinates': [6693,6942]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Jogre Dungeon                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6611,8063]} },
+
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Kalphite Hive                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [11038,7949]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Desert Slayer Dungeon               </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1650]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Smoke Dungeon                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [10546,9329]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Edgeville Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8804,5213]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dorgesh-Kaan South Dungeon          </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1700]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lumbridge Swamp Caves               </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9405,7624]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">H.A.M. Dungeon                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9377,6984]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Draynor Sewers                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8987,7040]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold of Security              </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8684,5600]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold of Player Safety         </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8643,5308]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Varrock Sewers                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9955,5303]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Abandoned Mine                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [11706,7037]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Barrows                             </div>'}, 'geometry': {'type': 'Point',   'coordinates': [12616,6693]} },
+
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Shade Catacombs                     </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 2350]} },
+
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Deep Wilderness Dungeon             </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8400,1515]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">King Black Dragon Lair              </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8171,2127]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lava Maze Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8610,2067]} },
+
+// for below, confirm all chaos tunnel entrances
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 2550]} },
+
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Temple Dungeon                </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9969,4118]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ape Atoll Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6116,11432]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dorgesh-Kaan South Dungeon          </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 2600]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Entrana Dungeon                     </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6580,5986]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">God Wars Dungeon                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7348,2967]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Jatizso Mines                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [3168,2420]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Kalphite lair                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9873,8143]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Miscellania & Etceteria Dungeon<br>Miscellania entrance </div>'}, 'geometry': {'type': 'Point',   'coordinates': [4062,2150]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Miscellania & Etceteria Dungeon<br>Etceteria entrance </div>'}, 'geometry': {'type': 'Point',   'coordinates': [4961,2000]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Mos Le\'Harmless Caves              </div>'}, 'geometry': {'type': 'Point',   'coordinates': [14105,9247]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Waterbirth Dungeon - West entrance  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [4168,3010]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Waterbirth Dungeon - East entrance  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [4339,3001]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Goblin Cave                         </div>'}, 'geometry': {'type': 'Point',   'coordinates': [4983,5840]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Fremennik Slayer Dungeon            </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 3150]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Mountain Camp cave                  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 3200]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Taverley Slayer Dungeon             </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 3250]}}
+
+/*    
+Additions?
+
+Rogue's Guild
+Heroe's Guild Dungeon
+Troll Stronghold
+Mining Guild
+Sophanem Bank
+Desert Mining Camp Mine
+Black Arm Gang hideout
+Brimhaven Agility Dungeon
+Fist of Guthix
+Salve Temple (Priest in Peril)
+Morytania Swamp Tunnel
+Zanaris Swamp Entrance
+Runecrafting Guild Portal at Wizard's Tower
+Draynor Dungeon above market
+Count Draynor's basement
+Varrock West Bank basement
+Lumbridge Castle  under kitchen
+Lumbridge Guides' house basement
+Shilo village mine
+Cairn Island cave
+Ardougne/Witchhaven dungeon
+Legends Guild dungeon
+Seer's village Mind mine
+Vampire's lair east of Combat Training Camp
+West Ardougne Sewers
+Dungeons East and South of Clocktower
+Tree Gnome Village dungeon
+Sinister Key dungeon
+Observatory Dungeon
+Underground Pass
+Gnome Stronghold dungeon east of Terrorbirds
+Piscatoris cavern
+Arandar Cave
+Mos Le'Harmless Tree resources cave entrances
+Digsite riff
+Dwarven Tunnels under White Wolf Mountain
+
+*/
+]                                                                                                                                             
+                                                                                                                                              
+                                                                                                                                              
+/*                                                                                                                                            
+window.ringweInfo = [                                                                                                                         
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Wealth : Grand Exchange</div>'}, 'geometry': {'type': 'Point',   'coordinates': [9359, 5254]} },
 ]
 
 window.ringslInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Example Item Name 1, Location, Data</div>'}, 'geometry': {'type': 'Point',   'coordinates': [3000, 3500]} },
 ]
-
-
 
 window.balloonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Example Item Name 1, Location, Data</div>'}, 'geometry': {'type': 'Point',   'coordinates': [3000, 3600]} },
@@ -286,13 +451,9 @@ window.ectoInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Example Item Name 1, Location, Data</div>'}, 'geometry': {'type': 'Point',   'coordinates': [3000, 3900]} },
 ]
 
-
 window.boatyInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Example Item Name 1, Location, Data</div>'}, 'geometry': {'type': 'Point',   'coordinates': [3000, 3100]} },
 ]
-
-
-
 */
 
 
