@@ -345,7 +345,7 @@ window.dungeonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Kalphite Hive                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [11038,7949]} },
 //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Desert Slayer Dungeon               </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1650]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Smoke Dungeon                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [10546,9329]} },
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Edgeville Dungeon<br><ahref="./images/varrock-edgeville-dungeon-WTM.png">Dungeon map</a>                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8804,5213]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Edgeville Dungeon<br><a href="./images/varrock-edgeville-dungeon-WTM.png">Dungeon map</a>                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8804,5213]} },
 //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dorgesh-Kaan South Dungeon          </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1700]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lumbridge Swamp Caves               </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9405,7624]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">H.A.M. Dungeon                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9377,6984]} },
