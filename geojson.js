@@ -330,7 +330,7 @@ window.dungeonInfo = [
 //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Gu\'Tanoth                          <br><center>(Not Yet Implemented)</center></div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 900]} },
 
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Asgarnian Ice Caves                 </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8101,7804]} },
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Taverley Dungeon                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7103,5782]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Taverley Dungeon<br><a href="./images/TaverleyDungeon-Woah-WTM.png">Dungeon Map</a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [7103,5782]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Falador Mole Lair                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7954,5954]} },
 //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brine Rat Cavern                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1100]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Fremennik Slayer Dungeon            </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6392,4030]} },
@@ -352,7 +352,7 @@ window.dungeonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Draynor Sewers                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8987,7040]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold of Security              </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8684,5600]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold of Player Safety         </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8643,5308]} },
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Varrock Sewers                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9955,5303]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Varrock Sewers<br><a href="./images/varrock-edgeville-dungeon-WTM.png">Dungeon Map</a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [9955,5303]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Abandoned Mine                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [11706,7037]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Barrows                             </div>'}, 'geometry': {'type': 'Point',   'coordinates': [12616,6693]} },
 
