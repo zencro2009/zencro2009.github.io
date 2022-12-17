@@ -337,7 +337,7 @@ window.dungeonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Keldagrim                           </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5867,3235]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Temple of Ikov                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5429,5740]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ourania Cave                        </div>'}, 'geometry': {'type': 'Point',   'coordinates': [3626,7114]} },
-{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brimhaven Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5965,7783]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brimhaven Dungeon<br><a href="https://zencro2009.github.io/dungeons/brimhaven/brimhaven-map.html">Dungeon Map </a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [5965,7783]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Karamja and Crandor Dungeon<br>Karamja entrance</div>'}, 'geometry': {'type': 'Point',   'coordinates': [6879,7658]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Karamja and Crandor Dungeon<br>Crandor entrance</div>'}, 'geometry': {'type': 'Point',   'coordinates': [6693,6942]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Jogre Dungeon                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6611,8063]} },
