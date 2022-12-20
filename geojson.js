@@ -106,7 +106,8 @@ window.duelInfo = [
 
  // ring of slaying
 window.ringslInfo = [
- {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Summona in Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10567, 9344]} }, 
+ //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Summona in Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10567, 9344]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Summona in Pollnivneach</div>'}, 'geometry': {'type': 'Point',   'coordinates': [10968,9082]} }, 
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Morytania Slayer Tower</div>'}, 'geometry': {'type': 'Point', 'coordinates': [11509, 4698]} },
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Rellekka Slayer Caves</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6365, 4024]} } 
  ]
