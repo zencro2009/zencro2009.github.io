@@ -334,6 +334,12 @@ window.dungeonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Taverley Dungeon<br><a href="./images/TaverleyDungeon-Woah-WTM.png">Dungeon Map</a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [7103,5782]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Falador Mole Lair                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [7954,5954]} },
 //{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Brine Rat Cavern                    </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 1100]} },
+
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Mining Guild/Dwarven Mine<br><a href="https://zencro2009.github.io/dungeons/dwarven/dwarvenguild.html">Dungeon Map </a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [8222,6261]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dwarven Mine/Mining Guild<br>Falador entrance<br><a href="https://zencro2009.github.io/dungeons/dwarven/dwarvenguild.html">Dungeon Map </a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [8525,5963]} },
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Dwarven Mine/Mining Guild<br>Ice Mountain entrance<br><a href="https://zencro2009.github.io/dungeons/dwarven/dwarvenguild.html">Dungeon Map </a></div>'}, 'geometry': {'type': 'Point',   'coordinates': [8190,5373]} },
+
+
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Fremennik Slayer Dungeon            </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6392,4030]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Keldagrim                           </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5867,3235]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Temple of Ikov                      </div>'}, 'geometry': {'type': 'Point',   'coordinates': [5429,5740]} },
