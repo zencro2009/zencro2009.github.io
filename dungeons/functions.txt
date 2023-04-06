@@ -1,0 +1,3 @@
+Basic functional structure to do:
+create directories for each dungeon
+move all files related to those dungeons into their respective directories
