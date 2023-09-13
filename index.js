@@ -651,7 +651,7 @@ function layerAmagic (map, rc) {
     var imgDir = 'images/'
     var amagicMarker = L.icon({
       iconUrl: imgDir + 'amagics-58x94.png',
-      iconRetinaUrl: imgDir + 'amagics-58x94.png.gif',
+      iconRetinaUrl: imgDir + 'amagics-58x94.png',
       iconSize: [29, 49],
       iconAnchor: [12, 41],
       popupAnchor: [-0, -31],
