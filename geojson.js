@@ -369,7 +369,14 @@ window.dungeonInfo = [
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Lava Maze Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8610,2067]} },
 
 // for below, confirm all chaos tunnel entrances
-//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 2550]} },
+//{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels                       </div>'}, 'geometry': {'type': 'Point',   'coordinates': [1, 2550]} },  
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels Entrance I   <br><b>Warning</b><br><i>Some monsters within require use of slayer helmet or facemask!</i>  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8499,4547]} }, 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels Entrance II  <br><b>Warning</b><br><i>Some monsters within require use of slayer helmet or facemask!</i>  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9005,4377]} }, 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels Entrance III <br><b>Warning</b><br><i>Some monsters within require use of slayer helmet or facemask!</i>  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9370,4456]} }, 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels Entrance IV  <br><b>Warning</b><br><i>Some monsters within require use of slayer helmet or facemask!</i>  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [8905,3825]} }, 
+{'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Tunnels Entrance V   <br><b>Warning</b><br><i>Some monsters within require use of slayer helmet or facemask!</i>  </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9352,3997]} }, 
+
+//<br><b>Warning</b><br>Some monsters require<br>slayer helmet or facemask!
 
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Chaos Temple Dungeon                </div>'}, 'geometry': {'type': 'Point',   'coordinates': [9969,4118]} },
 {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ape Atoll Dungeon                   </div>'}, 'geometry': {'type': 'Point',   'coordinates': [6116,11432]} },
