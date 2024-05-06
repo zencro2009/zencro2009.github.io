@@ -111,7 +111,11 @@ window.ringslInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Morytania Slayer Tower</div>'}, 'geometry': {'type': 'Point', 'coordinates': [11509, 4698]} },
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Rellekka Slayer Caves</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6365, 4024]} } 
  ]
- 
+
+ // explorer's ring 3
+ window.exploRingInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Explorers Ring(3), Cabbage Teleport</div>'}, 'geometry': {'type': 'Point',   'coordinates': [8475,6652]} }
+ ]
  
  window.ringweInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Wealth, Grand Exchange</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9370,5261]} } 
@@ -121,7 +125,10 @@ window.ringslInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Stronghold Scepter</div>'}, 'geometry': {'type': 'Point', 'coordinates': [8701,5639]} } 
  ]
 
- 
+ window.karamjaCartsInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to Shilo vilage</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6266,7276]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to north Brimhaven</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6692,9359]} } 
+ ]
  
  window.ectoInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ectophial, Ectofuntus</div>'}, 'geometry': {'type': 'Point', 'coordinates': [13352,4776]} } 
