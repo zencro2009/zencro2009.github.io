@@ -39,6 +39,7 @@
       'Gnome Gliders': layerGlider(map, rc),  
       'Magic Carpets': layerCarp(map, rc),
       'Mine Carts': layerMinec(map, rc),
+      'Karamja Carts': layerKcarts(map, rc),             
                      
 //Spells                     
       'Modern Magics': layerMmagic(map, rc),
@@ -56,7 +57,8 @@
       'Pharaoh\'s Scepter': layerPscept(map, rc),
       'Stronghold Scepter': layerSscept(map, rc),
       'Ectophial': layerEcto(map, rc),               
-      'Digsite Pendant': layerDig(map, rc),     
+      'Digsite Pendant': layerDig(map, rc),
+      'Explorer\'s Ring(3)': layerExploRing(map, rc),      
                      
 //    'Info': layerGeo(map, rc),                     
 //    'Balloons': layerBalloon(map, rc),
@@ -544,6 +546,40 @@ function layerCanoe (map, rc) {
   }
 /* FIN layer canoe */
 
+  /* BEG layer Karamja Carts */
+function layerKcarts (map, rc) {
+    var imgDir = 'images/'
+    var psceptMarker = L.icon({
+      iconUrl: imgDir + 'LOC-cart-80x80.png',
+      iconRetinaUrl: imgDir + 'LOC-cart-80x80.png',
+      iconSize: [50, 50],
+      iconAnchor: [25, 25],
+      popupAnchor: [-0, -31],
+      // shadowUrl: imgDir + '85x85-back.png',
+      shadowSize: [50, 50],
+      shadowAnchor: [25, 25]
+    })
+    var layerKcarts = L.geoJson(window.karamjaCartsInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: psceptMarker
+        })
+      }
+    })
+    map.addLayer(layerKcarts)
+    return layerKcarts
+  }
+/* FIN layer Karamja Carts */
+  
 /* BEG layer glider */
 function layerGlider (map, rc) {
     var imgDir = 'images/'
@@ -921,6 +957,40 @@ function layerEcto (map, rc) {
   }
 /* FIN layer ectophial */
 
+  /* BEG Explorer(3) Ring */
+function layerExploRing (map, rc) {
+    var imgDir = 'images/'
+    var exploRingMarker = L.icon({
+      iconUrl: imgDir + 'LOC-explorer-ring-80x80.png',
+      iconRetinaUrl: imgDir + 'LOC-explorer-ring-80x80.png',
+      iconSize: [50, 50],
+      iconAnchor: [25, 25],
+      popupAnchor: [-0, -31],
+      // shadowUrl: imgDir + '85x85-back.png',
+      shadowSize: [50, 50],
+      shadowAnchor: [25, 25]
+    })
+    var layerExploRing = L.geoJson(window.exploRingInfo, {
+      coordsToLatLng: function (coords) {
+        return rc.unproject(coords)
+      },
+      // add a popup content to the marker
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.name) {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: exploRingMarker
+        })
+      }
+    })
+    map.addLayer(layerExploRing)
+    return layerExploRing
+  }
+/* FIN Explorere(3) Ring */  
+  
 /* BEG layer dungeons */
 function layerDungeon (map, rc) {
     var imgDir = 'images/'
