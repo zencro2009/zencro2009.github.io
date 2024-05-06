@@ -126,8 +126,8 @@ window.ringslInfo = [
  ]
 
  window.karamjaCartsInfo = [
- {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to Shilo vilage</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6266,7276]} }, 
- {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to north Brimhaven</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6692,9359]} } 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 10gp to ride cart to Shilo vilage</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6266,7276]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 10gp to ride cart to north Brimhaven</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6692,9359]} } 
  ]
  
  window.ectoInfo = [
