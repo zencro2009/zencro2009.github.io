@@ -112,7 +112,19 @@ window.ringslInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Slaying, Rellekka Slayer Caves</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6365, 4024]} } 
  ]
  
+// Explorer's ring 3
+ window.exploRingInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Explorers Ring(3), Cabbage Teleport</div>'}, 'geometry': {'type': 'Point',   'coordinates': [8475,6652]} }
+ ]
  
+
+ window.karamjaCartsInfo = [
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to Shilo vilage</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6266,7276]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Pay 200gp to ride cart to north Brimhaven</div>'}, 'geometry': {'type': 'Point', 'coordinates': [6692,9359]} } 
+ ]
+
+
+  
  window.ringweInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Ring of Wealth, Grand Exchange</div>'}, 'geometry': {'type': 'Point', 'coordinates': [9370,5261]} } 
  ]
